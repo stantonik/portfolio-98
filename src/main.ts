@@ -174,12 +174,9 @@ scene.add(viewport);
 let cursorType: "pointer" | "cursor" | null = null;
 
 const updateCursor = () => {
-    let relOffsetX = 0;
-
     if ((cursorType == "cursor" || cursorType === null) && onClickCb !== null) {
         cursor.material.map = cursorTexPointer;
         cursor.material.needsUpdate = true;
-        relOffsetX = 0.2;
         layoutDirty = true;
         cursorType = "pointer";
     } else if ((cursorType == "pointer" || cursorType === null) && onClickCb === null) {

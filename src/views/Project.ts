@@ -27,7 +27,6 @@ import type {
     Heading,
     List,
     ListItem,
-    Image,
     Code,
     Blockquote,
 } from "mdast";
@@ -76,7 +75,7 @@ export default class Project implements View {
     private generation = 0;
 
 
-    constructor(appCtx: AppContext, mdPath: string) { this.ctx = appCtx; this.markdownPath = mdPath; }
+    constructor(appCtx: AppContext, mdPath: string) { this.ctx = appCtx; this.markdownPath = mdPath; void this.height; void this.contentHeight; }
 
 
     // ==================================================
